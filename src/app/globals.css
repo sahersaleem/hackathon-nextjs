@@ -20,6 +20,42 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer components {
+  .link {
+    @apply font-normal text-[16px] leading-[21.6px] text-[#726E8D];
+  }
+  h1{
+    @apply text-[36px] leading-[50.4px] text-blue
+  }
+  .h2{
+    @apply text-[32px] font-normal leading-[44.8px] text-white 
+  }
+  h3{
+    @apply text-[24px] font-normal leading-[33.3px] text-blue
+  }
+  
+  h4{
+    @apply text-[20px] leading-[28px] text-blue
+  }
+  h6{
+    @apply text-[14px] leading-[19.6px] font-[400]
+  }
+  
+  .btn{
+    @apply pr-[32px] pl-[32px] pt-[16px] pb-[16px] text-white bg-[#494465] 
+  }
+  .para{
+   @apply text-[18px] font-normal leading-[27px] text-white text-justify
+  }
+  .medium{
+    @apply text-[16px] leading-[24px]
+  }
+  .section-heading{
+    @apply text-[32px] leading-[39.38px]
+  }
+
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

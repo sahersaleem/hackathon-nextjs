@@ -8,10 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
+      screens:{
+        'xs':"200px"
+      },
       colors: {
+       'blue':"#2A254B",
+       'white':"#FFFFFF",
+       "off-white" :"#F9F9F9",
+
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      
+        fontFamily: {
+          'clash-display': ["var(--font-clash)",]
+        },
+      
     },
   },
   plugins: [],
