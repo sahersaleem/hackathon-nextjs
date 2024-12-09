@@ -8,9 +8,9 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 const Navbar = () => {
-  const [open, setisOpen] = useState<boolean>(true);
+  const [open, setisOpen] = useState<boolean>(false);
   return (
-    <div className="px-10 ">
+    <div className="px-10 overflow-x-hidden">
       {" "}
       <div className="flex justify-between p-6 px-10 items-center border-b border-[#000000]">
         <div className="text-[20px]">
