@@ -1,13 +1,13 @@
 'use client'
-import React, { useState } from "react";
+import React from "react";
 import { IoCartOutline, IoClose } from "react-icons/io5";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
-import { FaBars } from "react-icons/fa";
+
 const AboutPageHeader = () => {
-  const [open , setisOpen] = useState<boolean>(false)
+
   return (
     <div className="w-full">
       <div className="bg-[#2A254B] py-4 text-white ">
