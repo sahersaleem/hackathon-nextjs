@@ -10,7 +10,7 @@ interface IProductCard {
 }
 const ProductCard = ({ imageUrl, text1, text2, price }: IProductCard) => {
   return (
-    <div className="flex justify-between">
+    <div className="flex xsjustify-between xs:flex-col lg:flex-row  sm:justify-between">
       <div className="flex gap-[21px]">
         
         <Image src={imageUrl} width={109} height={134} alt="product" />
@@ -31,9 +31,9 @@ const ShoppingCart = () => {
     <div className="w-full">
       <Wrapper>
         <div className="pb-[20px]">
-        <h1 className=" mt-[64px]">Your Shopping Cart</h1>
-        <div className="flex flex-col border-[#EBE8F4] border-b pb-[20px]">
-        <div className="flex justify-between mt-[100px]">
+        <h1 className=" mt-[64px] xs:text-center sm:text-left">Your Shopping Cart</h1>
+        <div className="flex flex-col border-[#EBE8F4] border-b pb-[20px] xs:py-[8px] lg:py-0">
+        <div className="flex justify-between mt-[100px] xs:hidden sm:flex">
           <h4>Product</h4>
          
             <div className="flex justify-between w-60">
@@ -58,7 +58,7 @@ a tri color grey glaze."
               />
             </div>
           </div>
-          <div className="w-full flex justify-center items-end flex-col space-y-3 p-6">
+          <div className="w-full flex justify-center sm:items-end flex-col space-y-3 p-6">
             <div className="flex justify-center items-center gap-x-2"><h4>Subtotal </h4> <h3>£210</h3></div>
             <span>Taxes and shipping are calculated at checkout</span>
             <button className="btn">Go to checkout</button>

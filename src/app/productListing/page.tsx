@@ -30,21 +30,21 @@ const page = () => {
             <p className="medium">
               ProductType <FaAngleDown className="inline-block" />
             </p>
-            <p className="medium">
+            <p className="medium xs:hidden lg:flex">
               Price <FaAngleDown className="inline-block" />
             </p>
-            <p className="medium">
+            <p className="medium  xs:hidden lg:flex">
               Brand <FaAngleDown className="inline-block" />
             </p>
           </div>
-          <div className="flex gap-x-[16px]">
+          <div className="xs:hidden lg:flex gap-x-[16px]">
             <p className="medium">{`Sorted By :`}</p>
             <p className="medium">
               Date added <FaAngleDown className="inline-block" />
             </p>
           </div>
         </div>
-        <div className="flex flex-wrap gap-x-4 gap-y-10 pb-10">
+        <div className="flex xs:justify-center flex-wrap gap-x-4 gap-y-10 pb-10">
             <Card image="/images/product1.png" name="The Dandy chair" price="£125"/>
             <Card image="/images/item1.png" name="The Dandy chair" price="£125"/>
             <Card image="/images/item2.png" name="The Dandy chair" price="£125"/>

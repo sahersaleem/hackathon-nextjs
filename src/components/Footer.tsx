@@ -38,12 +38,12 @@ const Footer = () => {
             <Link href={"/"}>Return policy</Link>
           </div>
           <div className="flex flex-col gap-[12px] xs:mb-10">
-            <h2>Join our mailing list</h2>
-            <div> <input
+            <h2 className="xs:text-center lg:text-left">Join our mailing list</h2>
+            <div className="xs:flex lg:block flex-col"> <input
               placeholder="your@email.com"
               className="xs:w-[270px] lg:w-[327px] px-7 hover:outline-none bg-[#4A4566] py-4"
             />
-            <button className="btn !bg-white  text-blue">Sign Up</button></div>
+            <button className="btn !bg-white  text-blue xs:mt-4 lg:mt-0">Sign Up</button></div>
            
           </div>
         </div>

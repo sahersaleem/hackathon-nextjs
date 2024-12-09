@@ -20,7 +20,7 @@ const Featured = () => {
         </div>
         <div className="flex">
           {" "}
-          <button className="btn !bg-[#F9F9F9] !text-blue">Get in touch</button>
+          <button className="btn !bg-[#F9F9F9] !text-blue xs:w-full lg:w-auto xs:mt-4 lg:mt-0">Get in touch</button>
         </div>
       </div>
 

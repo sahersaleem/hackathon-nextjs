@@ -24,13 +24,13 @@ const AboutPageHeader = () => {
         </Wrapper>
       </div>
       <Wrapper>
-        <div className="flex justify-between py-5">
+        <div className="flex lg:justify-between py-5  ">
           <h1 className="text-[24px] leading-[29px] font-normal font-clash-display text-[#22202E]">
             Avion
           </h1>
-          <div className="flex  items-center justify-between w-96">
+          <div className="flex items-center lg:justify-between w-96 xs:justify-end">
           
-            <div className={`${open?"xs:flex xs:flex-col":"xs:hidden lg:flex"}xs:flex lg:block flex-col lg:space-x-[32px]`}>
+            <div className={`xs:hidden lg:flex flex-row  gap-x-[32px]`}>
               <Link href={"/"} className="medium text-[#726E8D]">
                 About us
               </Link>
@@ -45,7 +45,7 @@ const AboutPageHeader = () => {
               <IoCartOutline />
               <FaRegCircleUser />
               <CiSearch />
-              <FaBars className="xs:inline-block lg:hidden" onClick={()=>{setisOpen(!open)}}/>
+             
 
             </div> 
           </div>
