@@ -23,7 +23,7 @@ const page = () => {
       </div>
       <Wrapper>
         <div className="flex justify-between px-[20px] py-[24px] ">
-          <div className="flex gap-x-[12px]">
+          <div className="flex xs:justify-around items-center lg:gap-x-[12px] xs:w-full lg:w-auto">
             <p className="medium">
               Category <FaAngleDown className="inline-block" />
             </p>

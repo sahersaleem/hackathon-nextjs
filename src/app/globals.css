@@ -45,13 +45,13 @@ body {
     @apply pr-[32px] pl-[32px] pt-[16px] pb-[16px] text-white bg-[#494465] 
   }
   .para{
-   @apply text-[18px] font-normal leading-[27px] text-white text-justify
+   @apply text-[18px] font-light leading-[27px] text-white text-justify font-satoshi-display
   }
   .medium{
-    @apply text-[16px] leading-[24px]
+    @apply text-[16px] leading-[24px] font-satoshi-display font-light text-[#2A254B]
   }
   .section-heading{
-    @apply text-[32px] leading-[39.38px]
+    @apply xs:text-[20px] lg:text-[32px] leading-[39.38px]
   }
 
 }

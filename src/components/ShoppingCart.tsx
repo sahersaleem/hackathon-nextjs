@@ -10,12 +10,12 @@ interface IProductCard {
 }
 const ProductCard = ({ imageUrl, text1, text2, price }: IProductCard) => {
   return (
-    <div className="flex xsjustify-between xs:flex-col lg:flex-row  sm:justify-between">
-      <div className="flex gap-[21px]">
+    <div className="flex  xs:justify-between xs:flex-col lg:flex-row  sm:justify-between">
+      <div className="flex  xs:px-[10px] lg:py-0 gap-[21px]">
         
         <Image src={imageUrl} width={109} height={134} alt="product" />
         <div> <h4>{text1}</h4>
-        <p className="font-[400] text-[14px] leading-[21px]">{text2}</p>
+        <p className=" text-[14px] leading-[21px] font-satoshi-display font-light">{text2}</p>
         <p className="medium">{price}</p></div>
        
       </div>
@@ -58,9 +58,9 @@ a tri color grey glaze."
               />
             </div>
           </div>
-          <div className="w-full flex justify-center sm:items-end flex-col space-y-3 p-6">
-            <div className="flex justify-center items-center gap-x-2"><h4>Subtotal </h4> <h3>£210</h3></div>
-            <span>Taxes and shipping are calculated at checkout</span>
+          <div className="w-full flex justify-center items-end flex-col space-y-3 p-6">
+            <div className="flex justify-center items-center gap-x-2"><h4 className="text-[#4E4D93]">Subtotal </h4> <h3>£210</h3></div>
+            <span className="text-[#4E4D93] font-satoshi-display font-light text-end">Taxes and shipping are calculated at checkout</span>
             <button className="btn">Go to checkout</button>
           </div>
           </div>

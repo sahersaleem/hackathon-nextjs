@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="bg-[#2A254B] text-white">
       <Wrapper>
-        <div className="xs:h-auto lg:h-[380px] flex xs:flex-wrap xs:p-10 lg:p-0 xs:gap-x-20 lg:gap-x-0 lg:justify-around lg:items-center border-[#4E4D93] border-b xs:items-start ">
+        <div className="xs:h-auto lg:h-[380px] flex xs:flex-wrap xs:p-[20px] lg:p-0 xs:gap-x-20 lg:gap-x-0 lg:justify-around lg:items-center border-[#4E4D93] border-b xs:items-start ">
           <div className="flex flex-col gap-[12px] xs:mb-10">
             <h2>Menu</h2>
             <Link href={"/"}>New arrivals</Link>
@@ -38,7 +38,7 @@ const Footer = () => {
             <Link href={"/"}>Return policy</Link>
           </div>
           <div className="flex flex-col gap-[12px] xs:mb-10">
-            <h2 className="xs:text-center lg:text-left">Join our mailing list</h2>
+            <h2 className="text-left">Join our mailing list</h2>
             <div className="xs:flex lg:block flex-col"> <input
               placeholder="your@email.com"
               className="xs:w-[270px] lg:w-[327px] px-7 hover:outline-none bg-[#4A4566] py-4"
@@ -47,10 +47,10 @@ const Footer = () => {
            
           </div>
         </div>
-        <div className="flex justify-between p-3">
+        <div className="flex lg:justify-between p-3">
 
-<p className="text-[14px] leading-[18.9px]  font-normal">Copyright 2022 Avion LTD</p>
-             <div className="flex gap-[24px] ">
+<p className="text-[14px] leading-[18.9px]  font-light xs:text-center lg:text-left font-satoshi-display xs:w-full lg:w-auto">Copyright 2022 Avion LTD</p>
+             <div className="flex gap-[24px] xs:hidden lg:flex ">
            <FaLinkedin/>
            <FaFacebookSquare/>
            <FaInstagram/>

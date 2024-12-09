@@ -22,7 +22,8 @@ const config: Config = {
       },
       
         fontFamily: {
-          'clash-display': ["var(--font-clash)",]
+          'clash-display': ["var(--font-clash)",],
+          'satoshi-display': ["var(--font-satoshi)",]
         },
       
     },

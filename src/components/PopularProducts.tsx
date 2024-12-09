@@ -6,7 +6,7 @@ const PopularProducts= () => {
       <div className='bg-white lg:py-20 w-full'>
         <Wrapper>
   
-          <h1 className='section-heading mb-8 xs:text-center lg:text-left'>Our popular products</h1>
+          <h1 className='section-heading mb-8  xs:mx-6 lg:mx-0 text-left'>Our popular products</h1>
           <div className='flex justify-evenly'>
               <Card image='/images/item5.png' name='The Dandy chair' price={'£250'} width={630}  height={375} className='xs:hidden lg:flex'/>
               <Card image='/images/item1.png' name='The Dandy chair' price={'£250'}/>

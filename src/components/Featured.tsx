@@ -10,9 +10,9 @@ const Featured = () => {
           <h3 className="!leading-[33.6px] mb-8 xs:text-[20px] lg:text-[24px]">
             From a studio in London to a global brand with over 400 outlets
           </h3>
-          <p className="text-[#505977] mb-8 xs:text-[14px]">
+          <p className="text-[#505977] mb-8 xs:text-[14px] font-satoshi-display font-light">
             When we started Avion, the idea was simple. Make high quality
-            furniture affordable and available for the mass market.</p><p className="text-[#505977]"> Handmade,
+            furniture affordable and available for the mass market.</p><p className="text-[#505977] font-satoshi-display font-light"> Handmade,
             and lovingly crafted furniture and homeware is what we live, breathe
             and design so our Chelsea boutique become the hotbed for the London
             interior design community.

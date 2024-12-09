@@ -40,7 +40,7 @@ const Listings = () => {
   return (
     <div className="bg-white py-20 w-full">
       <Wrapper>
-        <h1 className="section-heading mb-8 xs:text-center lg:text-left">New Ceramics</h1>
+        <h1 className="section-heading mb-8 xs:mx-6 lg:mx-0 text-left">New Ceramics</h1>
         <div className="flex xs: justify-center lg:justify-between xs:flex-wrap lg:flex-nowrap xs:gap-6">
           <Card
             image="/images/item1.png"

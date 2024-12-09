@@ -5,6 +5,7 @@ import Wrapper from "./Wrapper";
 import Link from "next/link";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
+import { FaBars } from "react-icons/fa";
 
 const AboutPageHeader = () => {
 
@@ -13,10 +14,10 @@ const AboutPageHeader = () => {
       <div className="bg-[#2A254B] py-4 text-white ">
         <Wrapper>
           <div className="flex justify-between">
-            <h6 className="!leading-[18.9px] text-center text-white lg:ml-[400px]">
+            <h6 className="!leading-[18.9px] text-center text-white lg:ml-[400px] font-satoshi-display font-light">
               Free delivery on all orders over £50 with code easter checkout
             </h6>
-            <div className="flex w-60  justify-end items-end">
+            <div className="flex w-60  xs:justify-center xs:items-center lg:justify-end lg:items-end">
               {" "}
               <IoClose className="inline-block" />
             </div>
@@ -24,7 +25,7 @@ const AboutPageHeader = () => {
         </Wrapper>
       </div>
       <Wrapper>
-        <div className="flex lg:justify-between py-5  ">
+        <div className="flex lg:justify-between xs:px-5 lg:py-5  ">
           <h1 className="text-[24px] leading-[29px] font-normal font-clash-display text-[#22202E]">
             Avion
           </h1>
@@ -41,7 +42,7 @@ const AboutPageHeader = () => {
                 Blogs
               </Link>
             </div>
-            <div className="flex gap-x-3 text-[20px] ">
+            <div className="flex gap-x-3 text-[20px] xs:hidden lg:flex ">
               <IoCartOutline />
               <FaRegCircleUser />
               <CiSearch />
@@ -49,6 +50,7 @@ const AboutPageHeader = () => {
 
             </div> 
           </div>
+          <FaBars className="xs:inline-block lg:hidden"/>
         </div>
         </Wrapper>
         <div className="w-full flex items-center justify-center gap-x-[44px] p-6 bg-off-white">

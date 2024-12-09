@@ -10,10 +10,10 @@ import { FaBars } from "react-icons/fa";
 const Navbar = () => {
   const [open, setisOpen] = useState<boolean>(false);
   return (
-    <div className="px-10 overflow-x-hidden">
+    <div className="lg:px-10 overflow-x-hidden ">
       {" "}
-      <div className="flex justify-between p-6 px-10 items-center border-b border-[#000000]">
-        <div className="text-[20px]">
+      <div className="flex w-[100vw]  justify-between p-6 px-10 items-center border-b border-[#000000]">
+        <div className="text-[20px] xs:hidden lg:block">
           {" "}
           <CiSearch  className="xs:hidden lg:block"/>
         </div>
