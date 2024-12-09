@@ -24,7 +24,7 @@ const FeaturedSection = ({className}:{className:string}) => {
   return (
     <div className="bg-white  ">  
   <Wrapper><div className=" py-20 flex flex-col justify-around gap-y-20 ">
-    <h3 className="text-center">What makes our brand different</h3>
+    <h3 className="text-center xs:mx-4 sm:mx-0">What makes our brand different</h3>
     <div className=" flex xs:justify-center xs:gap-y-16 lg:gap-y-0 lg:justify-between xs:flex-wrap lg:flex-nowrap">
       <Card icon={<TbBus/>} heading="Next day as standard" para="Order before 3pm and get your order
 the next day as standard" className={className}/>

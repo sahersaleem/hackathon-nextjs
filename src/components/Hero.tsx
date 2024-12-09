@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="pb-10 bg-white">
       <Wrapper>
         <div className="bg-blue flex max-w-7xl "> 
-          <div className="flex flex-col justify-around xs:px-[20px] sm:px-10 xs:py-20 lg:px-11  xs:gap-y-20 lg:gap-y-0 ">
+          <div className="flex flex-col justify-around xs:px-[10px] sm:px-10 xs:py-20 lg:px-11  xs:gap-y-20 lg:gap-y-0 ">
             {" "}
             <div className=" space-y-[41px]">
               <h2 className="h2 xs:w-[300px] lg:w-auto ">

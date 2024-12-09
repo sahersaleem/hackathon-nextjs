@@ -65,7 +65,7 @@ const Listings = () => {
         </div>
         <div className="flex justify-center mt-14">
           {" "}
-          <button className="btn !bg-[#F9F9F9] !text-blue">
+          <button className="btn xs:w-full lg:w-auto !bg-[#F9F9F9] !text-blue">
             View Collection
           </button>
         </div>
