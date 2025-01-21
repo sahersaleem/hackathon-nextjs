@@ -1,14 +1,20 @@
+'use client'
 import React from "react";
 import Wrapper from "./Wrapper";
 import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "./CartContext";
 
-interface ICard {
+
+export interface ICard {
   image: string;
   name: string;
   price: string;
   className?: string;
   width?: number;
   height?: number;
+  href?:string
+  _id?:string
 }
 export const Card = ({
   image,
@@ -17,20 +23,28 @@ export const Card = ({
   className,
   width,
   height,
+  href,
+ _id
 }: ICard) => {
+
+
+  const {addProducts} = useCart()
+
   return (
     <div className={`${className} flex flex-col gap-[24px]  justify-center`}>
-      <Image
+    <Link href={href||""} ><Image
         src={image}
         alt="item"
         width={width || 305}
-        height={height || 375}
-        className=""
-      />
+        height={height || 400 }
+        className="max-h-[400px] min-h-[400px] object-cover object-center"
+      /></Link> 
       <div className="flex flex-col gap-[8px]">
         {" "}
         <h4>{name}</h4>
         <p>{price}</p>
+    
+        {_id && <button className="btn !py-2" onClick={()=>{addProducts(_id!)}}>Add to Cart</button> }
       </div>
     </div>
   );

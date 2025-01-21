@@ -1,9 +1,11 @@
 import React from 'react'
 import Wrapper from './Wrapper'
 import { Card } from './Listings'
+import { Toaster } from 'react-hot-toast'
 const PopularProducts= () => {
     return (
       <div className='bg-white lg:py-20 w-full'>
+        <Toaster position='bottom-left'/>
         <Wrapper>
   
           <h1 className='section-heading mb-8  xs:mx-6 lg:mx-0 text-left'>Our popular products</h1>

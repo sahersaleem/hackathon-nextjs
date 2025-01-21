@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="flex flex-col justify-around xs:px-[10px] sm:px-10 xs:py-[32px] sm:py-20 lg:px-11  xs:gap-y-20 lg:gap-y-0 ">
             {" "}
             <div className=" space-y-[41px]">
-              <h2 className="h2 lg:w-[513px]   ">
+              <h2 className="h2 lg:w-[513px] font-clash-display  ">
                 The furniture brand for the  future, with timeless designs
               </h2>
               <button className="btn xs:hidden lg:block ">View Collection</button>
