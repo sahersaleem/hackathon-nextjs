@@ -3,10 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
+ 
 } from '@clerk/nextjs'
 
 import NextTopLoader from 'nextjs-toploader';
@@ -94,11 +91,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider waitlistUrl="/">
       <html lang="en">
         <body>
-       
+          
          <NextTopLoader color="bg-blue" height={18}/>
+         
           {children}
         </body>
       </html>

@@ -5,10 +5,10 @@ import { useParams } from "next/navigation";
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
-import CartContext, { cartContext, useCart }  from "@/components/CartContext";
+import CartContext, {  useCart }  from "@/components/CartContext";
 import {  Toaster } from "react-hot-toast";
 
-interface IProduct {
+export interface IProduct {
   name: string;
   description: string;
   price: number;

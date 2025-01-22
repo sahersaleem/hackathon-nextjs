@@ -4,52 +4,52 @@ import React, { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegCircleUser } from "react-icons/fa6";
-import { SignedIn , UserButton , SignedOut , SignInButton } from "@clerk/nextjs";
+import { SignedIn, UserButton, SignedOut, SignInButton } from "@clerk/nextjs";
 
 import Link from "next/link";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "./CartContext";
-
-
-
-
-
-
-
 
 const Navbar = () => {
   const [open, setisOpen] = useState<boolean>(false);
-  const {cartProducts} = useCart()
+  const { cartProducts } = useCart();
   return (
     <div className="lg:px-10 overflow-x-hidden  ">
       {" "}
       <div className="flex w-full  justify-between p-6 px-10 items-center border-b border-[#000000]">
         <div className="text-[20px] xs:hidden lg:block">
           {" "}
-          <CiSearch  className="xs:hidden lg:block"/>
+          <CiSearch className="xs:hidden lg:block" />
         </div>
 
         <h1 className="text-[24px] leading-[29px] font-normal font-clash-display">
           Avion
         </h1>
-        <div className="flex gap-x-3 text-[20px] xs:hidden lg:flex items-center">
-         Cart({cartProducts.length})
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-        </div>
-    
 
-        <div className="xs:flex lg:hidden gap-x-4 items-center"> <CiSearch  className="xs:flex lg:hidden"/><button onClick={()=>{setisOpen(!open)}}><FaBars className="xs:block lg:hidden"/></button>
-        <div className="xs:flex lg:hidden gap-x-4"><Link href={'/login'}>Login</Link></div>
-        
+        <div className="xs:flex  gap-x-4 items-center">
+          {" "}
+          <CiSearch className="hidden" />{" "}
+          <div className="flex gap-x-2 text-[20px] items-center">
+            <FaShoppingCart />({cartProducts.length})
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+          </div>
+          <button
+            onClick={() => {
+              setisOpen(!open);
+            }}
+          >
+            <FaBars className="xs:block lg:hidden" />
+          </button>
         </div>
-       
       </div>
-      <div className={`w-full flex items-center justify-center gap-x-[44px] p-6 ${open?"xs:flex-col xs:flex lg:flex-row gap-y-4":"xs:hidden lg:flex lg:flex-row"}`}>
+      <div
+        className={`w-full flex items-center justify-center gap-x-[44px] p-6 ${open ? "xs:flex-col xs:flex lg:flex-row gap-y-4" : "xs:hidden lg:flex lg:flex-row"}`}
+      >
         <Link href={"/"} className="link">
           Plant pots
         </Link>
@@ -62,8 +62,8 @@ const Navbar = () => {
         <Link href={"/shopping"} className="link">
           shopping
         </Link>
-        <Link href={"/"} className="link">
-          Crockery
+        <Link href={"/orders"} className="link">
+          Orders
         </Link>
         <Link href={"/"} className="link">
           tableware

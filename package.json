@@ -9,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.9.14",
+    "@clerk/nextjs": "^6.9.15",
     "@radix-ui/react-select": "^2.1.4",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.70.0",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.473.0",
     "next": "14.2.16",
     "next-sanity": "^9.8.37",
@@ -26,18 +27,20 @@
     "react-hot-toast": "^2.5.1",
     "react-icons": "^5.4.0",
     "sanity": "^3.70.0",
+    "stripe": "^17.5.0",
     "styled-components": "^6.1.14",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.3.16",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.16",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.7.3"
   }
 }
