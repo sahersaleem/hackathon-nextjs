@@ -7,12 +7,12 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { SignedIn, UserButton, SignedOut, SignInButton } from "@clerk/nextjs";
 
 import Link from "next/link";
-import { FaBars, FaShoppingCart } from "react-icons/fa";
+import { FaBars, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "./CartContext";
 
 const Navbar = () => {
   const [open, setisOpen] = useState<boolean>(false);
-  const { cartProducts } = useCart();
+  const { cartProducts, wishList } = useCart();
   return (
     <div className="lg:px-10 overflow-x-hidden  ">
       {" "}
@@ -31,6 +31,13 @@ const Navbar = () => {
           <CiSearch className="hidden" />{" "}
           <div className="flex gap-x-2 text-[20px] items-center">
             <FaShoppingCart />({cartProducts.length})
+            <Link
+              href={"/wishList"}
+              className="flex justify-center items-center"
+            >
+              {" "}
+              <FaHeart />({wishList.length})
+            </Link>
             <SignedIn>
               <UserButton />
             </SignedIn>
@@ -65,8 +72,8 @@ const Navbar = () => {
         <Link href={"/orders"} className="link">
           Orders
         </Link>
-        <Link href={"/"} className="link">
-          tableware
+        <Link href={"/contact"} className="link">
+           Contact
         </Link>
         <Link href={"/"} className="link">
           Cutlery

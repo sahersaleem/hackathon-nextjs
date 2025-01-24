@@ -22,6 +22,7 @@
     "next-sanity": "^9.8.37",
     "nextjs-progressbar": "^0.0.16",
     "nextjs-toploader": "^3.7.15",
+    "openai": "^4.80.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.5.1",

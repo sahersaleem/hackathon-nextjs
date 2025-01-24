@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 import CartContext, {  useCart }  from "@/components/CartContext";
 import {  Toaster } from "react-hot-toast";
+import CommentAndReviews from "@/components/CommentAndReviews";
 
 export interface IProduct {
   name: string;
@@ -72,8 +73,8 @@ const Page = () => {
   return (
     <CartContext>
  
-    <div className="w-full max-w-7xl mx-auto h-screen flex justify-center items-center pb-20 gap-y-11 xs:flex-col lg:flex-row">
-      <Toaster position="bottom-right"/>
+    <div className="w-full max-w-7xl mx-auto  flex justify-center items-center pb-20 gap-y-11 xs:flex-col lg:flex-row h-auto mt-40">
+      <Toaster position="bottom-right"/> 
       {loading && (
         <div>
           <DetailedPageSkeleton />
@@ -81,7 +82,8 @@ const Page = () => {
       )}
 
       {productData && (
-        <>
+        <div>
+        <div className="flex xs:flex-col lg:flex-row justify-center items-center">
           <div className="mt-10 lg:w-[50%] xs:px-10 lg:px-0">
             <Image
               src={productData?.image}
@@ -91,7 +93,7 @@ const Page = () => {
               className="object-center object-cover max-h-[500px]"
             />
           </div>
-          <div className="lg:w-[50%] flex flex-col gap-y-4 xs:px-10 lg:px-0">
+          <div className="lg:w-[50%] flex flex-col gap-y-4 xs:px-10 lg:px-0 xs:mt-4 lg:mt-0">
             <h1 className="font-satoshi-display !text-5xl">
               {productData.name}
             </h1>
@@ -108,7 +110,10 @@ const Page = () => {
 
             <button className="btn lg:w-[30%]" onClick={()=>{addProducts(productData._id)}}>Add to Cart</button>
           </div>
-        </>
+        
+        </div>
+        <CommentAndReviews/>
+        </div>
       )}
     </div>
     </CartContext>
