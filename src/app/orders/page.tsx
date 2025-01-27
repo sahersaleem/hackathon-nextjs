@@ -25,10 +25,12 @@ const Page = () => {
   const [order, setOrder] = useState<IOrder[]>([]);
   const [ids, setIds] = useState<string[]>();
   const [productData, setProductData] = useState<IProduct[]>([]);
+  const [loading , setLoading] = useState<boolean>(false)
   const email = userdata?.user?.emailAddresses;
 
   useEffect(() => {
     const getUserOrders = async () => {
+      setLoading(true)
       if (email) {
         const userEmail = email![0].emailAddress;
         const orderDataFetchFromSanity = await client.fetch(
@@ -37,6 +39,7 @@ const Page = () => {
         );
 
         setOrder(orderDataFetchFromSanity);
+        setLoading(false)
       }
     };
 
@@ -45,7 +48,6 @@ const Page = () => {
 
   useEffect(() => {
     const getCartProducts = async () => {
-
       if(order.length===0) return;
       const product = order.flatMap((item) => item.products);
       setIds(product);
@@ -70,14 +72,21 @@ const Page = () => {
           <div>
             <h1 className="text-center mt-10">Your Orders</h1>
           </div>
+
           <div className="flex gap-10 flex-wrap justify-center items-center mt-20" >
+
+
+
+            {
+              loading && <div className="loader"></div>
+            }
             {order.map((item) => (
               <div
                 className="min-w-[300px] max-w-[400px] bg-gray-50  border-blue border-[1px] rounded-md px-3 py-2 shadow-xl min-h-[300px] space-y-4 "
                 key={item._id}
               > 
                 <p>Date:{item._createdAt}</p>
-                  <h1 className="!text-xl">Products</h1>
+                  <h1 className="!text-xl text-blue font-clash-display">Products</h1>
                 <ul>
                   {item.products.map((id, index) => (
                     <li key={index}>

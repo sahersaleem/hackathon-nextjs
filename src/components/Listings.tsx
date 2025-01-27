@@ -46,14 +46,17 @@ export const Card = ({
           {" "}
           <p>{price}</p>{" "}
           {wishList.find((id) => id === _id) ? (
-            <FaHeart className="text-red-500"/>
+            <FaHeart className="text-red-500 animate-pulse"/>
           ) : (
             <button
               onClick={() => {
                 addProduct(_id!);
               }}
+              className=""
             >
-              <FaHeart />
+             {
+              _id?<FaHeart  className="text-blue"/>:""
+             } 
             </button>
           )}
         </div>

@@ -30,13 +30,14 @@ const Navbar = () => {
           {" "}
           <CiSearch className="hidden" />{" "}
           <div className="flex gap-x-2 text-[20px] items-center">
-            <FaShoppingCart />({cartProducts.length})
+            <div  className="flex justify-center items-center gap-x-1">
+            <FaShoppingCart /><span className="text-sm">({cartProducts.length})</span></div>
             <Link
               href={"/wishList"}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center gap-x-1"
             >
               {" "}
-              <FaHeart />({wishList.length})
+              <FaHeart className="text-red-500"/><span className="text-sm">({wishList.length})</span>
             </Link>
             <SignedIn>
               <UserButton />
