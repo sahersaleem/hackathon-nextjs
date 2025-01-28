@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
       from: "saleemsaba281@gmail.com",
       to: email,
       subject: "Order Confirmation",
-      text:`<div> <h1>Thank you for your purchase!</h1> <p>Your order ID is ${id} and the total amount is $${amount}.</p> <p> Your order will sent to your address in 2 days</div>`
+      text:`Thank you for your purchase! .Your order ID is ${id} and the total amount is $${amount}.Your order will sent to your address in 2 days`
     };
 
     try {

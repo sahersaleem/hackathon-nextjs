@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/select";
 import { SearchIcon } from "lucide-react";
 
-interface ICategory {
+export interface ICategory {
   name: string;
   _id: string;
 }
